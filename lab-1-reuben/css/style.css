@@ -1,0 +1,187 @@
+/* Color variables makes it easier to select colors*/
+:root {
+  --metallica-black: #111111;
+  --metallica-silver: #cccccc;
+  --metallica-gold: #c9b36e;
+  --metallica-red: #8b0000;
+  --metallica-dark: #1a1a1a;
+  --metallica-rust: #b9400d;
+}
+
+/* Base styles var()selects the color in the :root */
+body {
+  background-color: var(--metallica-black);
+  color: var(--metallica-silver);
+  line-height: 1.6;
+}
+
+/* this makes it so everything has these */
+* {
+  padding: 0;
+  margin: 0;
+}
+
+/* Header styles */
+header {
+  /* make the transition from black to --metaclica-dark to the bottom */
+  background: linear-gradient(to bottom, #000000, var(--metallica-dark));
+  padding: 1.5rem;
+  /* give that nice gold color at the bottom only */
+  border-bottom: 3px solid var(--metallica-gold);
+  text-align: center;
+}
+
+h1 {
+  font-family: cursive;
+  color: var(--metallica-gold);
+  font-size: 3rem;
+  /* makes all the letters in this to be capital */
+  text-transform: uppercase;
+  /* spaces the letters little bit apart to look nice */
+  letter-spacing: 3px;
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.nav-list {
+  padding: 0;
+  /* enables a flexible box layout model for its direct children */
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.nav-list li a {
+  color: var(--metallica-silver);
+  font-size: 1.2rem;
+  /* turns the font to bold text */
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--metallica-gold);
+}
+
+/* adds the hover effevt to the a tags at the top */
+.nav-list li a:hover {
+  background-color: var(--metallica-gold);
+  color: var(--metallica-black);
+}
+
+/* Main content styles */
+main {
+  /* this adjusts the width to make the boxes smaller */
+  max-width: 1200px;
+  /* this centers the main area */
+  margin: 2rem auto; 
+}
+
+article {
+  background-color: var(--metallica-dark);
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border: 1px solid var(--metallica-gold);
+  box-shadow: 0 0 15px rgba(201, 179, 110, 0.2);
+}
+
+h2 {
+  color: var(--metallica-gold);
+  font-size: 2rem;
+  border-bottom: 2px solid var(--metallica-rust);
+  padding-bottom: 0.5rem;
+  margin-top: 0;
+}
+
+h3,
+h4 {
+  color: var(--metallica-silver);
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+h4 {
+  font-size: 1.3rem;
+  color: var(--metallica-rust);
+}
+
+/* styel for all p tags */
+p {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+
+blockquote {
+  font-style: italic;
+  color: var(--metallica-gold);
+  border-left: 3px solid var(--metallica-gold);
+  padding-left: 1rem;
+  margin: 1.5rem 0;
+  font-size: 1.2rem;
+}
+
+/* Link styles */
+a {
+  color: var(--metallica-gold);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--metallica-rust);
+  text-decoration: underline;
+}
+
+/* List styles */
+ul {
+  list-style-type: none;
+}
+
+
+/* Definition list styles */
+dl {
+  margin: 1rem;
+}
+
+dt {
+  color: var(--metallica-gold);
+  font-size: 1.2rem;
+}
+
+dd {
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Image styles */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 1.5rem auto;
+  border: 2px solid var(--metallica-gold);
+}
+
+/* Video styles */
+iframe {
+  display: block;
+  margin: 1.5rem auto;
+  max-width: 100%;
+  border: 3px solid var(--metallica-gold);
+}
+
+/* Footer styles */
+footer {
+  background-color: var(--metallica-dark);
+  color: var(--metallica-silver);
+  text-align: center;
+  padding: 1.5rem;
+  margin-top: 2rem;
+  border-top: 1px solid var(--metallica-gold);
+}
+
+.link {
+  text-align: center;
+}

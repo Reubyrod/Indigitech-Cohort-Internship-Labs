@@ -1,0 +1,114 @@
+table,
+th,
+td {
+    border: 2px solid black;
+    border-collapse: collapse;
+}
+
+* {
+    margin: 0;
+}
+
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: rgb(112, 81, 53);
+    padding: 20px;
+    color: #333;
+    box-shadow: 0px 0px 20px black inset;
+}
+
+main {
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    margin: 20px;
+    box-shadow: 0 4px 20px black;
+    background: white;
+}
+
+th,
+td {
+    padding: 12px 15px;
+    text-align: center;
+}
+
+td {
+    box-shadow: 0px 0px 6px inset;
+}
+
+
+tr:nth-child(even) {
+    background-color: rgb(168, 168, 168);
+
+}
+
+
+th {
+    background-color: #4a7c59;
+    /* Nature green */
+    color: white;
+    font-weight: bold;
+}
+
+/* Header Styling */
+.main-th {
+    font-size: 24px;
+    text-align: center;
+    background-color: #3a5a40;
+    /* Darker green */
+    padding: 15px;
+}
+
+/* Image Styling */
+img {
+    max-width: 150px;
+    height: auto;
+    border-radius: 4px;
+    display: block;
+}
+
+/* Hover Effect and adding the flicker*/
+td:hover {
+    background-color: grey;
+    color: whitesmoke;
+    animation: flicker 6s infinite alternate;
+}
+
+/* setting the flicker and making it a inset flicker */
+@keyframes flicker {
+
+    0%,
+    15%,
+    20%,
+    25%,
+    50%,
+    65%,
+    100% {
+        box-shadow: 0px 0px 20px #111 inset;
+        /* Very dark grey */
+    }
+
+    5%,
+    30%,
+    40%,
+    60%,
+    80%,
+    90% {
+        box-shadow: 0px 0px 40px #333 inset;
+        /* Dark grey */
+    }
+
+    10%,
+    35%,
+    45%,
+    70%,
+    85%,
+    95% {
+        box-shadow: 0px 0px 15px #000 inset;
+        /* Pure black */
+    }
+}

@@ -1,0 +1,85 @@
+* {
+    margin: 0 auto;
+    padding: 0;
+}
+
+body {
+    font-family: 'Comic Sans MS';
+    background-color: var(--skyblue);
+    padding: 20px;
+    box-shadow: 0px 0px 50px inset;
+    font-size: 1rem;
+}
+
+:root {
+    --skyblue: #A7D3D6;
+    --warmgreen: #B5C7A4;
+    --dustyrose: #E8B7B7;
+    --mistyteal: #7AA2A6;
+    --goldenwheat: #E5D9B6;
+    --deepforestgreen: #314134;
+    --warmcream: #F5E9D1;
+    --sunpeach: #F2C4A3;
+}
+
+table,
+th,
+td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 5px;
+}
+
+
+caption {
+    font-size: 2rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    border: 2px solid black;
+    border-collapse: collapse;
+    background-color: var(--sunpeach);
+    color: var(--deepforestgreen);
+    box-shadow: 0px 0px 7px inset;
+}
+
+img {
+    width: 80%;
+    border-radius: 8px;
+}
+
+table {
+    width: 80%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0px 0px 20px;
+}
+
+td {
+    text-align: center;
+    max-width: 500px;
+    background-color: var(--warmcream);
+    color: var(--deepforestgreen);
+    border-radius: 2px;
+    box-shadow: 0px 0px 7px inset;
+}
+
+td:nth-child(odd) {
+    background-color: var(--goldenwheat);
+}
+
+td:hover {
+    transform: scale(1.3);
+    box-shadow: 0px 0px 10px var(--deepforestgreen) inset;
+    background-color: var(--sunpeach);
+    border-radius: 8px;
+}
+
+th {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    text-align: center;
+    background-color: var(--dustyrose);
+    color: var(--deepforestgreen);
+    box-shadow: 0px 0px 7px inset;
+}
