@@ -1,0 +1,420 @@
+/* ===== RESET & BASE STYLES ===== */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Aclonica", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    background-color: var(--shadow-cavern);
+    color: var(--text-engraved);
+    font-family: 'Georgia', serif;
+}
+
+/* ===== VARIABLES ===== */
+:root {
+    /* Primary Dwarven Colors */
+    --dwarven-stone: #8a7a6d;
+    /* Weathered stone walls */
+    --deep-forge: #5a3921;
+    /* Dark, forged metal */
+    --molten-gold: #c9a227;
+    /* Gold accents & gilded books */
+    --ember-red: #8c2e0b;
+    /* Warm forge glow */
+    --mountain-moss: #4a5c4a;
+    /* Aged green like mossy stone */
+
+    /* Secondary & Accent Colors */
+    --ancient-wood: #4a3a2a;
+    /* Dark oak shelves */
+    --rune-silver: #c0c0c0;
+    /* Metallic silver for details */
+    --scroll-parchment: #e8d8b5;
+    /* Pale parchment for book pages */
+    --dwarven-ale: #b85c12;
+    /* Rich amber (for cozy lighting) */
+    --shadow-cavern: #2a1e16;
+    /* Deep shadows in corners */
+
+    /* Text & UI */
+    --text-engraved: #d7c9b5;
+    /* Light, readable text (carved stone) */
+    --text-rustic: #5a4a3a;
+    /* Darker text for contrast */
+}
+
+/* ===== TYPOGRAPHY ===== */
+
+h2 {
+    padding: 15px;
+    background-color: var(--ancient-wood);
+    border-bottom: 2px solid var(--molten-gold);
+}
+
+h1,
+h2,
+h3 {
+    text-align: center;
+}
+
+p {
+    font-style: italic;
+    text-align: center;
+}
+
+blockquote {
+    text-align: center;
+}
+
+main {
+    padding: 2rem 0;
+}
+
+section {
+    margin-bottom: 3rem;
+}
+
+article {
+    margin-bottom: 2rem;
+    padding: 0 1rem;
+}
+
+.welcome {
+    background-color: var(--deep-forge);
+    padding: 2rem;
+    border-radius: 8px;
+    margin: 2rem auto;
+    max-width: 900px;
+    border: 2px solid var(--molten-gold);
+}
+
+.welcome p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.welcome strong {
+    color: var(--molten-gold);
+}
+
+blockquote {
+    font-size: 1.2rem;
+    color: var(--molten-gold);
+    padding: 1rem;
+    border-left: 4px solid var(--molten-gold);
+    background-color: var(--ancient-wood);
+    margin: 1rem auto;
+    max-width: 500px;
+    text-transform: uppercase;
+}
+
+.quote {
+    text-transform: lowercase;
+}
+
+/* ===== NAVIGATION ===== */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    background-color: var(--ancient-wood);
+    padding: 0 2rem;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 20px;
+    align-items: center;
+}
+
+nav a {
+    display: inline-flex;
+    align-items: center;
+    height: 100%;
+    color: var(--text-engraved);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0 1rem;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--molten-gold);
+}
+
+/* ===== SLIDESHOW ===== */
+.slideshow-container {
+    background-color: var(--shadow-cavern);
+    max-width: 100%;
+    position: relative;
+    margin: auto;
+}
+
+.slideshow {
+    position: relative;
+    width: auto;
+    height: 700px;
+    overflow: hidden;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    animation: slideShow 21s infinite;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slide:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.slide:nth-child(2) {
+    animation-delay: 7s;
+}
+
+.slide:nth-child(3) {
+    animation-delay: 14s;
+}
+
+@keyframes slideShow {
+    0% {
+        opacity: 0;
+    }
+
+    5% {
+        opacity: 1;
+    }
+
+    /* Fade in */
+    30% {
+        opacity: 1;
+    }
+
+    /* Stay visible */
+    35% {
+        opacity: 0;
+    }
+
+    /* Fade out */
+    100% {
+        opacity: 0;
+    }
+
+    /* Stay hidden */
+}
+
+#calander {
+    background-color: var(--dwarven-stone);
+    padding: 2rem;
+}
+
+.cal-box {
+    max-width: 800px;
+    margin: 0 auto;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem auto;
+    background-color: var(--scroll-parchment);
+    color: var(--text-rustic);
+}
+
+caption {
+    font-size: 1.5rem;
+    padding: 1rem;
+    color: var(--molten-gold);
+    background-color: var(--ancient-wood);
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+td {
+    padding: 0.8rem;
+    text-align: center;
+    border: 1px solid var(--ancient-wood);
+}
+
+tr:first-child td {
+    font-weight: bold;
+    background-color: var(--mountain-moss);
+    color: var(--text-engraved);
+}
+
+/* ===== HOURS SECTION ===== */
+article:last-of-type {
+    background-color: var(--mountain-moss);
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 8px;
+}
+
+article:last-of-type p {
+    line-height: 1.8;
+    text-align: left;
+    padding: 0 1rem;
+}
+
+/* ===== BOOK SECTION ===== */
+.book-section {
+    padding: 2rem 0;
+    background: var(--dwarven-stone);
+}
+
+.book-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.books {
+    background: var(--scroll-parchment);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px var(--shadow-cavern);
+    transition: transform 0.3s ease;
+    border: 1px solid var(--ancient-wood);
+}
+
+.books:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px var(--deep-forge);
+}
+
+.book-pic {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    border: 2px solid var(--ancient-wood);
+}
+
+.book-pic:hover {
+    transform: scale(1.10) rotate(5deg);
+    box-shadow: 0px 0px 15px var(--shadow-cavern);
+    transition: .5s ease-in-out;
+    border: 3px solid var(--molten-gold);
+}
+
+.books h3 {
+    color: var(--deep-forge);
+    margin-bottom: 0.5rem;
+}
+
+.books p {
+    margin: 0;
+    color: var(--text-rustic);
+}
+
+footer {
+    background-color: var(--deep-forge);
+    padding: 3rem 2rem;
+    color: var(--text-engraved);
+    border-top: 3px solid var(--molten-gold);
+}
+
+footer h2 {
+    color: var(--molten-gold);
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    text-align: center;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section {
+    padding: 1rem;
+}
+
+.footer-section h3 {
+    color: var(--molten-gold);
+    margin-bottom: 1.5rem;
+    font-size: 1.3rem;
+    border-bottom: 1px solid var(--dwarven-ale);
+    padding-bottom: 0.5rem;
+    display: inline-block;
+}
+
+.footer-section p,
+.footer-section address {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+    font-style: normal;
+}
+
+.footer-section address {
+    font-style: normal;
+}
+
+.contact-method {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.contact-icon {
+    color: var(--molten-gold);
+    margin-right: 1rem;
+    font-size: 1.2rem;
+    min-width: 20px;
+}
+
+.footer-bottom {
+    padding-top: 2rem;
+    margin-top: 2rem;
+    border-top: 1px solid var(--dwarven-stone);
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        height: auto;
+        padding: 1rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 1rem;
+    }
+
+    .slideshow {
+        height: 400px;
+    }
+
+    .content {
+        grid-template-columns: 1fr;
+    }
+}
